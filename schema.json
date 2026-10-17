@@ -1,0 +1,24 @@
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Voidstone Player Link",
+  "description": "Links a Minecraft account UUID to a Discord user ID.",
+  "type": "object",
+  "properties": {
+    "minecraft_uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The Minecraft account UUID."
+    },
+    "discord_uid": {
+      "type": "string",
+      "pattern": "^[0-9]{17,20}$",
+      "description": "The Discord user ID."
+    }
+  },
+  "required": [
+    "minecraft_uuid",
+    "discord_uid"
+  ],
+  "additionalProperties": false
+}
